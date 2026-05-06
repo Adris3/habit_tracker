@@ -22,5 +22,5 @@ type HabititemProps = {
 }
 
 function Habititem({ habit }: HabititemProps) {
-    return <h1>Hi</h1>
+    return <h1>{habit.name}</h1>
 }
