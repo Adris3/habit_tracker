@@ -12,7 +12,11 @@ export function Habitlist() {
 
     return <div className="flex flex-col gap-3">
         {habits.map(habit => (
-            <h1>{habit.name}</h1>
+            <Habititem key={habit.id}></Habititem>
         ))}
     </div>;
+}
+
+function Habititem() {
+    return <h1>Hi</h1>
 }
