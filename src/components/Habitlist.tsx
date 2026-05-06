@@ -22,5 +22,8 @@ type HabititemProps = {
 }
 
 function Habititem({ habit }: HabititemProps) {
-    return <h1>{habit.name}</h1>
+    // return <h1>{habit.name}</h1>
+    return <div className="rounded-xl bg-zinc-800 p-4">
+        <div className="flex items-center justify-between mb-3">{habit.name}</div>
+    </div>
 }
