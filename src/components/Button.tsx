@@ -1,8 +1,10 @@
+import type { ReactNode } from "react"
+
 type ButtonProps = {
-    text: string
+    children: ReactNode
 }
 
-export function Button(props: ButtonProps) {
+export function Button({children}: ButtonProps) {
     
-    return <button>{props.text}</button>
+    return <button>{children}</button>
 }
