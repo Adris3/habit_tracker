@@ -18,8 +18,8 @@ function Header(){
     <div className="flex flex-col gap-1">
       <span className="text-zinc-400 text-sm">May 3 - May 9 </span>
       <div className="flex items-center gap-3">
-        <Button></Button>
-        <Button></Button>
+        <Button text= "Prev"></Button>
+        <Button text= "Next"></Button>
       </div>
     </div>
   </header>
