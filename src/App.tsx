@@ -1,3 +1,5 @@
+import { Button } from "./components/Button"
+
 export default function App() {
   return (
   <div className="max-w-2xl mx-auto p-4 flex flex-col gap-4">
@@ -16,8 +18,8 @@ function Header(){
     <div className="flex flex-col gap-1">
       <span className="text-zinc-400 text-sm">May 3 - May 9 </span>
       <div className="flex items-center gap-3">
-        <button>Prev</button>
-        <button>Next</button>
+        <Button></Button>
+        <Button></Button>
       </div>
     </div>
   </header>
