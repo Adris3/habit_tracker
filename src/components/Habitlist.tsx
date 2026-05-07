@@ -1,3 +1,5 @@
+import { Button } from "./Button";
+
 export function Habitlist() {
     const habits = [{id: 1, name: "hi"},
                     {id: 2, name: "hello"},
@@ -16,17 +18,26 @@ export function Habitlist() {
 }
 
 type HabititemProps = {
-    habit: {id:string, name:string}
+    habit: {id:number, name:string}
 }
 
 function Habititem({ habit }: HabititemProps) {
-    // return <h1>{habit.name}</h1>
-    return <div className="rounded-xl bg-zinc-800 p-4 flex-col gap-3">
-        <div className="flex items-center justify-between">
-             <div className="flex items-center justify-between">
+    const visibleDates = [new Date()];
+    return (
+        <div className="rounded-xl bg-zinc-800 p-4">
+            <div className="flex items-center justify-between">
                 <span className="font-medium">{habit.name}</span>
-                <span className="text-sm text-amber-400"> 3</span>
+                <span className="text-sm text-amber-400">3</span>
+                <Button>Delete</Button>
+            </div>
+            <div className="flex gap-1.5">
+                {visibleDates.map(date => (
+                    <Button key={date.toISOString()}>
+                        <span className="font-medium">Mon</span>
+                        <span>2</span>
+                    </Button>
+                ))}
             </div>
         </div>
-    </div>
+    )
 }
