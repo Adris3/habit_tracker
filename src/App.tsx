@@ -8,7 +8,8 @@ export default function App() {
   const [habits, setHabits] = useState<Habit[]>([]);
 
   function addHabit(name: String) {
-    console.log(name)
+    
+    setHabits([...habits, {id: crypto.randomUUID(), name }])
   }
 
   return (
