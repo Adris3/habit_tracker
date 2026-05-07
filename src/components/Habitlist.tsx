@@ -22,7 +22,7 @@ type HabititemProps = {
 }
 
 function Habititem({ habit }: HabititemProps) {
-    const visibleDates = [new Date()];
+    const visibleDates = [new Date(), new Date(), new Date()];
     return (
         <div className="rounded-xl bg-zinc-800 p-4">
             <div className="flex items-center justify-between">
