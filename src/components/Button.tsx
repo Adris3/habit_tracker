@@ -1,8 +1,10 @@
 import type { ComponentProps } from "react"
 
-type ButtonProps = {} & ComponentProps<"button"> 
+type ButtonProps = {
+    variant?: "primary" | "secondary" | "ghost destructive"
+} & ComponentProps<"button"> 
  
-export function Button({...props}: ButtonProps) {
+export function Button({variant = "primary", ...props}: ButtonProps) {
     
     return <button 
     {...props} className="bg-violet-600 hover:bg-violet-500 
