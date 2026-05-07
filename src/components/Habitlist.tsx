@@ -26,10 +26,14 @@ function Habititem({ habit }: HabititemProps) {
     return (
         <div className="rounded-xl bg-zinc-800 p-4">
             <div className="flex items-center justify-between">
-                <span className="font-medium">{habit.name}</span>
-                <span className="text-sm text-amber-400">3</span>
+                <div className="flex items-center gap-3">
+                    <span className="font-medium">{habit.name}</span>
+                    <span className="text-sm text-amber-400">3</span>
+                </div>
+
                 <Button>Delete</Button>
             </div>
+
             <div className="flex gap-1.5">
                 {visibleDates.map(date => (
                     <Button key={date.toISOString()}>
