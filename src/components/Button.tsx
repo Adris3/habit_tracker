@@ -1,8 +1,6 @@
-import type { ComponentProps, ReactNode } from "react"
+import type { ComponentProps } from "react"
 
-type ButtonProps = {
-    children: ReactNode
-} & ComponentProps<"button"> 
+type ButtonProps = {} & ComponentProps<"button"> 
  
 export function Button({...props}: ButtonProps) {
     
