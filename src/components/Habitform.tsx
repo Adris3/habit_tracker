@@ -6,6 +6,8 @@ export function Habitform(){
 
     function handleSubmit(e: SubmitEvent){
         e.preventDefault()
+        if (name.trim() === "") return;
+        setName("");
     }
 
     return <form className="flex gap-2" onSubmit={handleSubmit}>
