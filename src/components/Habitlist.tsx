@@ -38,7 +38,7 @@ function Habititem({ habit }: HabititemProps) {
 
             <div className="flex gap-1.5">
                 {visibleDates.map(date => (
-                    <Button key={date.toISOString()} disabled={isFuture(date)}>
+                    <Button className= "flex flex-1 flex-col"key={date.toISOString()} disabled={isFuture(date)}>
                         <span className="font-medium">{format(date, "EEE")}</span>
                         <span>{format(date, "d")}</span>
                     </Button>
