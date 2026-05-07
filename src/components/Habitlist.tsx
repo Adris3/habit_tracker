@@ -1,4 +1,5 @@
 import { Button } from "./Button";
+import { startOfWeek, eachDayOfInterval, endOfWeek } from "date-fns";
 
 export function Habitlist() {
     const habits = [{id: 1, name: "hi"},
@@ -22,7 +23,10 @@ type HabititemProps = {
 }
 
 function Habititem({ habit }: HabititemProps) {
-    const visibleDates = [new Date(), new Date(), new Date()];
+    const visibleDates = eachDayOfInterval({
+        start: startOfWeek(new Date()), 
+        end: endOfWeek(new Date())
+    });
     return (
         <div className="rounded-xl bg-zinc-800 p-4">
             <div className="flex items-center justify-between">
