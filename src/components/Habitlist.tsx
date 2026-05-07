@@ -2,9 +2,7 @@ import { Button } from "./Button";
 import { startOfWeek, eachDayOfInterval, endOfWeek, format } from "date-fns";
 
 export function Habitlist() {
-    const habits = [{id: 1, name: "hi"},
-                    {id: 2, name: "hello"},
-                    {id: 3, name: "greetings"},
+    const habits = [{id: 1, name: "hi"}
     ];
 
     if (habits.length === 0) {
@@ -40,7 +38,7 @@ function Habititem({ habit }: HabititemProps) {
 
             <div className="flex gap-1.5">
                 {visibleDates.map(date => (
-                    <Button key={date.toISOString()}>
+                    <Button key={date.toISOString()} disabled>
                         <span className="font-medium">{format(date, "EEE")}</span>
                         <span>{format(date, "d")}</span>
                     </Button>
