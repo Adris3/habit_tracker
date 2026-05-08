@@ -41,7 +41,7 @@ function Habititem({ habit, deleteHabit, toggleHabit}: HabititemProps) {
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <span className="font-medium">{habit.name}</span>
-                    <span className="text-sm text-amber-400">{streak}</span>
+                   {streak !== 0 && (<span className="text-sm text-amber-400">{streak}</span>)}
                 </div>
 
                 <Button onClick={() => deleteHabit(habit.id)} variant="ghost-destructive" className="text-sm">Delete</Button>
@@ -65,13 +65,14 @@ function Habititem({ habit, deleteHabit, toggleHabit}: HabititemProps) {
 }
 
 function getStreak(completions: Date[]) {
-    let streak = 0;
-    let date = new Date();
+    // let streak = 0;
+    // let date = new Date();
 
-    while(completions.some(c => isSameDay(c, date))){
-        streak++;
-        date = subDays(date, 1);
-    }
+    // while(completions.some(c => isSameDay(c, date))){
+    //     streak++;
+    //     date = subDays(date, 1);
+    // }
 
-    return streak
+    // return streak
+    return completions.length
 }
