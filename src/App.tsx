@@ -11,7 +11,7 @@ export default function App() {
     setHabits(curr => [...curr, {id: crypto.randomUUID(), name}])
   }
 
-  function deleteHabit(id: String) {
+  function deleteHabit(id: string) {
     setHabits(curr => curr.filter(h => h.id !== id))
   }
 

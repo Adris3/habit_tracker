@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 import { startOfWeek, eachDayOfInterval, endOfWeek, format, isFuture } from "date-fns";
 
-export type Habit = {id: String, name: String}
+export type Habit = {id: string, name: String}
 
 type HabitlistProps = {
     habits: Habit[]
